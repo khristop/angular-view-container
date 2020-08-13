@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MENU_CONTAINER } from '../menu-injector.token';
 
 @Component({
   selector: 'app-main',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+
+  public readonly feedMenuBarContainerToken = MENU_CONTAINER;
 
   constructor() { }
 
