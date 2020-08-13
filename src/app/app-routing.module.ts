@@ -5,6 +5,11 @@ import { SecondaryComponent } from './secondary/secondary.component';
 
 const appRoutes: Routes = [
   {
+    path: '',
+    redirectTo: 'main',
+    pathMatch: 'full'
+  },
+  {
     path: 'main',
     component: MainComponent
   },

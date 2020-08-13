@@ -8,7 +8,7 @@ import { MENU_CONTAINER } from '../menu-injector.token';
 })
 export class MainComponent implements OnInit {
 
-  public readonly feedMenuBarContainerToken = MENU_CONTAINER;
+  public readonly menuContainerToken = MENU_CONTAINER;
 
   constructor() { }
 
