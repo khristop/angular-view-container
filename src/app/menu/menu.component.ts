@@ -6,7 +6,7 @@ import { MENU_CONTAINER } from '../menu-injector.token';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  public readonly menuBarContainerToken = MENU_CONTAINER;
+  public readonly menuContainerToken = MENU_CONTAINER;
   constructor() { }
 
   ngOnInit() {

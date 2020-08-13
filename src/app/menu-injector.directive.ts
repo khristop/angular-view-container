@@ -19,7 +19,7 @@ export class MenuInjectorDirective {
     }
   }
 
-  @Input() set msuiInjectedContainer(containerToken: InjectionToken<BehaviorSubject<ViewContainerRef>>) {
+  @Input() set appMenuInjector(containerToken: InjectionToken<BehaviorSubject<ViewContainerRef>>) {
     if (this.lastSubject) {
       this.lastSubject.next(null);
     }
