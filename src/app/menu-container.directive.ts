@@ -2,9 +2,9 @@ import { Directive, InjectionToken, Injector, Input, OnDestroy, ViewContainerRef
 import { BehaviorSubject, Subject } from 'rxjs';
 
 @Directive({
-  selector: '[appMenuInjector]'
+  selector: '[appMenuContainer]'
 })
-export class MenuInjectorDirective {
+export class MenuContainerDirective {
 
   lastSubject: Subject<ViewContainerRef>;
 
@@ -19,7 +19,7 @@ export class MenuInjectorDirective {
     }
   }
 
-  @Input() set appMenuInjector(containerToken: InjectionToken<BehaviorSubject<ViewContainerRef>>) {
+  @Input() set appMenuContainer(containerToken: InjectionToken<BehaviorSubject<ViewContainerRef>>) {
     if (this.lastSubject) {
       this.lastSubject.next(null);
     }
