@@ -1,0 +1,14 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-left: 10px;
+}
+
+ul :last-child {
+  margin-left: auto;
+}
