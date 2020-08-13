@@ -28,13 +28,13 @@ export class MenuContentDirective implements OnDestroy {
       this.subscription.unsubscribe();
     }
 
-    this.subscription = this.injector.get(containerToken).asObservable().subscribe(vcr =>  {
+    this.subscription = this.injector.get(containerToken).asObservable().subscribe(viewContainerRef =>  {
       if (this.lastContainer) {
         this.lastContainer.clear();
       }
-      this.lastContainer = vcr;
-      if (vcr) {
-        vcr.createEmbeddedView(this.templateRef);
+      this.lastContainer = viewContainerRef;
+      if (viewContainerRef) {
+        viewContainerRef.createEmbeddedView(this.templateRef);
       }
     });
   }
